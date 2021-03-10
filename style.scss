@@ -1,5 +1,6 @@
 $primary-color: darkred;
 $secondary-color: gold;
+$background-color: rgb(4, 4, 63);
 body {
     font-family: sans-serif;
     background-color: #040404;
@@ -31,12 +32,11 @@ a {
 #landing {
     width: 100%;
     height: 100vh;
-    background: url(https://i.pinimg.com/originals/0f/17/f6/0f17f6a326efcb81ea89a2f8652b5ac6.jpg) top right;
+    background: url(https://image.freepik.com/free-vector/elegant-navy-blue-background-with-overlap-layer_95742-317.jpg) top right;
     background-size: cover;
     position: relative;
     &::before {
         content: "";
-        background: rgba(0, 0, 0, .05);
         position: absolute;
         top: 0;
         right: 0;
@@ -60,23 +60,30 @@ a {
         font-size: 64px;
         font-family: fantasy;
         color: $secondary-color;
-        background-color: black;
+        background-color: $background-color;
+        width: 850px;
+        height: 90px;
+        border-radius: 80px;
     }
     h2 {
+        text-align: center;
         color: $secondary-color;
         margin: 50px;
         font-size: 24px;
         font-weight: 500;
         letter-spacing: 1px;
         text-transform: uppercase;
-        background-color: black;
+        background-color: $background-color;
+        width: 800px;
+        height: 60px;
+        border-radius: 80px;
     }
     .btn-scroll {
         transition: .5s;
         color: $primary-color;
         i {
             font-size: 48px;
-            background: navy;
+            background: $background-color;
             border-radius: 25px;
             padding: 20px;
             width: 200px;
@@ -85,6 +92,25 @@ a {
         &:hover {
             color: $secondary-color;
         }
+    }
+}
+
+.red-line {
+    border: solid 1px white;
+}
+
+.nav {
+    background: $background-color;
+    color: $secondary-color;
+    list-style: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    width: 100%;
+    direction: ltr;
+    border: 1px solid white;
+    a {
+        color: $secondary-color;
+        transition: .5s;
     }
 }
 
@@ -171,6 +197,7 @@ a {
 }
 
 .gallery {
+    color: $primary-color;
     text-align: center;
     position: center;
     h1 {
@@ -182,11 +209,12 @@ a {
     }
     img {
         font-size: 48px;
-        background: navy;
+        background: $primary-color;
         border-radius: 25px;
         padding: 20px;
         width: 200px;
         height: 150px;
+        margin-bottom: 50px;
     }
     .gallery-section-1 {
         text-align: center;
@@ -194,4 +222,11 @@ a {
     .gallery-section-2 {
         text-align: center;
     }
+}
+
+.footer {
+    background-color: $primary-color;
+    color: black;
+    position: relative;
+    box-sizing: border-box;
 }
